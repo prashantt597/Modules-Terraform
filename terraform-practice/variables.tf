@@ -124,3 +124,8 @@ variable "Route-name2" {
 variable "My-ALB" {
   description = "Enter Application Load Balancer Name"
 }
+
+
+variable "launch-temp-instance-name" {
+  description = "Enter instance name for Launch templet"
+}
