@@ -74,7 +74,14 @@ resource "aws_route_table" "My-route-table" {
 }
 
 resource "aws_route_table_association" "route_association" {
-    subnet_id = aws_subnet.my_subnet.id
+    subnet_id = aws_subnet.my_subnet1.id
+    route_table_id = aws_route_table.My-route-table.id
+  
+}
+
+
+resource "aws_route_table_association" "route_association" {
+    subnet_id = aws_subnet.my_subnet3.id
     route_table_id = aws_route_table.My-route-table.id
   
 }
@@ -112,7 +119,7 @@ resource "aws_route_table" "Pvt-route-table" {
 }
 
 resource "aws_route_table_association" "route-association-nat" {
-  subnet_id = aws_subnet.my_subnet2.id
+  subnet_id = aws_subnet.my_subnet4.id
     route_table_id = aws_route_table.Pvt-route-table.id
    
 }
@@ -147,7 +154,7 @@ resource "aws_lb" "my_alb" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.alb_sg.id]
-  subnets            = [aws_subnet.my_subnet.id]
+  subnets            = [aws_subnet.my_subnet1.id, aws_subnet.my_subnet3.id]
 
   tags = {
     Name = var.My-ALB

@@ -88,28 +88,6 @@ variable "pvt-subnet-name-2" {
   
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 variable "igw_name" {
     description = "Enter IGW Name"
   
