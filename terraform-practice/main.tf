@@ -254,6 +254,13 @@ resource "aws_launch_template" "launch_template" {
 }
 
 
+resource "aws_autoscaling_attachment" "asg_target_group_attachment" {
+  autoscaling_group_name = aws_autoscaling_group.my_asg.id
+  lb_target_group_arn    = aws_lb_target_group.my_target_group.arn
+}
+
+
+
 resource "aws_autoscaling_group" "my_asg" {
   vpc_zone_identifier  = [aws_subnet.my_subnet1.id, aws_subnet.my_subnet3.id]  # Multiple AZs
   desired_capacity     = 2  # Adjust as needed
