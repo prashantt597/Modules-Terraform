@@ -6,12 +6,12 @@ resource "aws_vpc" "my_vpc" {
 
 }
 
-resource "aws_subnet" "my_subnet" {
+resource "aws_subnet" "my_subnet1" {
     vpc_id = aws_vpc.my_vpc.id
-    cidr_block = var.subnet_cidr
-    availability_zone = var.sub-avail-zone-pub
+    cidr_block = var.Pub-subnet_cidr-1
+    availability_zone = var.avail-zone-pub1
     tags = {
-      Name = var.subnet-name
+      Name = var.pub-subnet-name-1
     }
   
 }
@@ -19,10 +19,34 @@ resource "aws_subnet" "my_subnet" {
 
 resource "aws_subnet" "my_subnet2" {
     vpc_id = aws_vpc.my_vpc.id
-    cidr_block = var.pvtsubnet_cidr
-    availability_zone = var.sub-avail-zone-pvt
+    cidr_block = var.pvt-subnet-cidr-1
+    availability_zone = var.avail-zone-pvt1
     tags = {
-      Name = var.pvtsubnet-name
+      Name = var.pvt-subnet-name-1
+    }
+  
+}
+
+
+
+
+resource "aws_subnet" "my_subnet3" {
+    vpc_id = aws_vpc.my_vpc.id
+    cidr_block = var.Pub-subnet_cidr-2
+    availability_zone = var.avail-zone-pub2
+    tags = {
+      Name = var.pub-subnet-name-2
+    }
+  
+}
+
+
+resource "aws_subnet" "my_subnet4" {
+    vpc_id = aws_vpc.my_vpc.id
+    cidr_block = var.pvt-subnet-cidr-2
+    availability_zone = var.avail-zone-pvt2
+    tags = {
+      Name = var.pvt-subnet-name-2
     }
   
 }

@@ -12,41 +12,103 @@ variable "vpc-name" {
   
 }
 
-variable "subnet_cidr" {
+variable "Pub-subnet_cidr-1" {
     description = "Enter CIDR for Public Subnet"
   
 }
 
 
-variable "sub-avail-zone-pub" {
+variable "avail-zone-pub1" {
     description = "Enter AZ for subnet"
   
 }
 
 
 
-variable "subnet-name" {
+variable "pub-subnet-name-1" {
     description = "Enter Subnet Name"
   
 }
 
 
 
-variable "sub-avail-zone-pvt" {
+variable "pvt-subnet-cidr-1" {
+    description = "Enter CIDR for Public Subnet"
+  
+}
+
+
+variable "avail-zone-pvt1" {
+    description = "Enter AZ for subnet"
+  
+}
+
+variable "pvt-subnet-name-1" {
+    description = "Enter Subnet Name"
+  
+}
+
+
+
+
+
+variable "Pub-subnet_cidr-2" {
+    description = "Enter CIDR for Public Subnet"
+  
+}
+
+
+variable "avail-zone-pub2" {
     description = "Enter AZ for subnet"
   
 }
 
 
-variable "pvtsubnet_cidr" {
+
+variable "pub-subnet-name-2" {
+    description = "Enter Subnet Name"
+  
+}
+
+
+
+variable "pvt-subnet-cidr-2" {
     description = "Enter CIDR for Public Subnet"
   
 }
 
-variable "pvtsubnet-name" {
+
+variable "avail-zone-pvt2" {
+    description = "Enter AZ for subnet"
+  
+}
+
+variable "pvt-subnet-name-2" {
     description = "Enter Subnet Name"
   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 variable "igw_name" {
     description = "Enter IGW Name"
